@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f3f4f6;
+            color: #333;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Header Styling */
+        .header {
+            width: 100%;
+            background-color: #0077cc;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Chat Container Styling */
+        .chat-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .chat-box {
+            width: 100%;
+            height: 400px;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-box .bot-message, .chat-box .user-message {
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 10px;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+
+        .bot-message {
+            background-color: #0077cc;
+            color: #fff;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background-color: #f3f4f6;
+            color: #333;
+            align-self: flex-end;
+        }
+
+        /* Chat Input Styling */
+        .chat-input {
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .chat-input input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+        }
+
+        .chat-input button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 20px 20px 0;
+            transition: background-color 0.3s;
+        }
+
+        .chat-input button:hover {
+            background-color: #005fa3;
+        }
+
+        /* Footer Styling */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background-color: #f1f1f1;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .footer a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>CHATBOT</h1>
+    </header>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 ASIVANRAJ. All rights reserved.</p>
+        <p>Contact: <a href="mailto:your-email@example.com">sivan2000@gmail.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
